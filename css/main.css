@@ -1,0 +1,122 @@
+/* default styles */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: url(../images/image-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+
+.dropdown{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.dropdown__image{
+    width: 300px;
+    height: 100px;
+}
+
+.dropdown__image img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.countries,
+.discover{
+position: relative;
+}
+
+.countries ul,
+.discover ul{
+background-color: #fff;
+position: absolute;
+left: 0;
+margin: 10px;
+width: 200px;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+border-radius: 6px;
+opacity: 0;
+pointer-events: none;
+transform: translateY(20px);
+transition: all 0.45s ease;
+}
+
+.countries li,
+.discover li{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.countries li:hover,
+.discover li:hover{
+background-color: rgba(6, 65, 228, 0.2);
+cursor: pointer;
+}
+
+.countries a,
+.discover a{
+    color: #000;    
+}
+
+.dropdown button{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown button:hover{
+   color: rgb(114, 101, 101);
+}
+
+
+
+.countries button:focus + ul,
+.discover button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(0);
+}
+
+
+.home {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.home:hover {
+    color: rgb(114, 101, 101);
+}
